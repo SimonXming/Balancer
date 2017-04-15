@@ -1,0 +1,6 @@
+.ant-layout-header {
+  background: #fff;
+}
+.ant-layout-header .header-menu > li {
+  float: right;
+}

@@ -10,6 +10,11 @@ module.exports = [
     exclude: ['node_modules']
   },
   {
+    test: /\.less$/,
+    loaders: ["style-loader", "less-loader"],
+    exclude: ['node_modules']
+  },
+  {
     test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
     exclude: /(node_modules|bower_components)/,
     loader: "file-loader"
