@@ -1,47 +1,63 @@
 {
-  "name": "react-webpack-babel",
-  "version": "0.0.3",
-  "description": "React Webpack Babel Starter Kit",
-  "main": "''",
-  "scripts": {
-    "build": "webpack --config webpack.production.config.js --progress --profile --colors",
-    "start": "webpack-dev-server --progress --profile --colors",
-    "lint": "eslint --ext js --ext jsx src || exit 0",
-    "dev": " webpack-dashboard -- webpack-dev-server --progress --profile --colors"
+  "name": "antd-admin",
+  "version": "1.0.0",
+  "description": "React Admin Boilerplate, with React + Ant Design",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=5.0 <7",
+    "npm": ">=3.3 <4"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/alicoding/react-webpack-babel"
-  },
-  "author": "Ali Al Dallal",
-  "license": "MIT",
-  "homepage": "https://github.com/alicoding/react-webpack-babel#readme",
-  "dependencies": {
-    "node-sass": "^4.3.0",
-    "react": "15.4.2",
-    "react-dom": "15.4.2",
-    "sass-loader": "^6.0.2"
-  },
+  "keywords": [
+    "ant",
+    "react",
+    "admin",
+    "frontend"
+  ],
   "devDependencies": {
-    "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
-    "babel-plugin-transform-class-properties": "^6.22.0",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-plugin-transform-runtime": "^6.22.0",
-    "babel-preset-es2015": "6.22.0",
-    "babel-preset-react": "^6.23.0",
-    "babel-runtime": "^6.22.0",
-    "css-loader": "0.26.1",
-    "extract-text-webpack-plugin": "^v2.0.0-rc.1",
-    "file-loader": "^0.10.0",
-    "html-webpack-plugin": "^2.26.0",
-    "postcss-loader": "^1.2.2",
-    "react-hot-loader": "^3.0.0-beta.6",
+    "antd": "1.10.0",
+    "babel-core": "6.4.5",
+    "babel-eslint": "6.0.0",
+    "babel-loader": "6.2.1",
+    "babel-plugin-antd": "0.4.0",
+    "babel-polyfill": "6.9.1",
+    "babel-preset-es2015": "6.3.13",
+    "babel-preset-react": "6.3.13",
+    "babel-preset-stage-0": "6.5.0",
+    "css-loader": "^0.25.0",
+    "eslint": "2.7.0",
+    "eslint-config-airbnb": "6.x",
+    "eslint-plugin-react": "4.x",
+    "file-loader": "0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "less": "2.7.1",
+    "less-loader": "^2.2.3",
+    "lesshint": "2.0.2",
+    "react": "15.0.2",
+    "react-cookie": "0.4.7",
+    "react-dom": "15.0.2",
+    "react-hot-loader": "1.3.0",
+    "react-router": "2.0.1",
+    "reqwest": "^2.0.5",
+    "strip-loader": "0.1.2",
     "style-loader": "0.13.1",
+    "stylelint": "6.6.0",
+    "stylelint-config-standard": "9.0.0",
     "url-loader": "0.5.7",
-    "webpack": "^2.2.1",
-    "webpack-cleanup-plugin": "^0.4.2",
-    "webpack-dashboard": "^0.3.0",
-    "webpack-dev-server": "^2.4.1"
+    "webpack": "1.12.12",
+    "webpack-dev-server": "1.14.1"
+  },
+  "dependencies": {
+    "extract-text-webpack-plugin": "^1.0.1",
+    "superagent": "2.0.0",
+    "whatwg-fetch": "^1.0.0"
+  },
+  "scripts": {
+    "build": "webpack --progress --colors --display-error-details",
+    "prod": "set NODE_ENV=production&&webpack --progress --colors --config webpack.config.prod.js -p --display-error-details",
+    "clean": "rd /s /q dist",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --content-base dist --hot --inline --display-error-details",
+    "eslint": "eslint --ext .js,.jsx src/view",
+    "stylelint": "stylelint \"src/**/*.css\"",
+    "lesshint": "lesshint src/"
   }
 }
