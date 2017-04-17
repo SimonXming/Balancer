@@ -1,7 +1,12 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'python:3.5'
+    }
+    
+  }
   stages {
-    stage('') {
+    stage('error') {
       steps {
         sh 'env'
       }
